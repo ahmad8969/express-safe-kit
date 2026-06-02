@@ -1,0 +1,78 @@
+{
+  "name": "express-safe-kit",
+  "version": "0.1.0",
+  "description": "Lightweight, secure, beginner-friendly Express.js middleware kit \u2014 secure your Express app in one line.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node init && tsup --watch",
+    "build": "node init && tsup",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "node scripts/prepublish.mjs"
+  },
+  "homepage": "https://github.com/ahmad8969/express-safe-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmad8969/express-safe-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmad8969/express-safe-kit/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ahmad8969"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "security",
+    "helmet",
+    "rate-limit",
+    "cors",
+    "typescript",
+    "nodejs",
+    "backend",
+    "api",
+    "express-middleware",
+    "security-headers",
+    "api-security"
+  ],
+  "author": "Ahmad",
+  "license": "MIT",
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "@types/supertest": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.8",
+    "dotenv": "^8.2.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "supertest": "^7.1.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.8"
+  }
+}
